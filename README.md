@@ -1,7 +1,14 @@
 # Chatbot Project
 ================
 
-A conversational AI designed to assist with common business inquiries.
+A conversational AI designed to assist with common business inquiries, developed as part of a learning and research project.
+
+
+## Introduction
+------------
+
+This chatbot project is designed to provide a conversational interface for businesses, handling common inquiries about hours, location, services, and more. It leverages Python with NLTK and spaCy for NLP, and is deployed using Flask.
+
 
 ## Description
 ------------
@@ -9,6 +16,7 @@ A conversational AI designed to assist with common business inquiries.
 This chatbot uses Python with NLTK and spaCy for natural language processing. It is designed to handle common user queries about business hours, location, services, pricing, and more. The chatbot is deployed using Flask as a web interface.
 
 While some features are fully functional, others (like querying products and orders) are still under development.
+
 
 ## Technologies Used
 --------------------
@@ -19,6 +27,7 @@ While some features are fully functional, others (like querying products and ord
 - Flask (for web interface)
 - SQLite (for database integration)
 - CSS (for web interface styling)
+
 
 ## Features
 -----------
@@ -32,8 +41,10 @@ While some features are fully functional, others (like querying products and ord
 - **Careers**: Shares information about job opportunities. *(Functional)*
 - **Entity Recognition with spaCy**: Identifies entities in user queries to improve responses. *(Functional)*
 
+
 ## Configuration
 --------------
+
 
 ### Setting Up the Environment
 
