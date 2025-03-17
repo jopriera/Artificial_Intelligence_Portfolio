@@ -1,0 +1,146 @@
+2025-03-17 15:52:06,144 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-17 15:52:06,145 - INFO - [33mPress CTRL+C to quit[0m
+2025-03-17 15:52:06,146 - INFO -  * Restarting with stat
+2025-03-17 15:52:07,717 - WARNING -  * Debugger is active!
+2025-03-17 15:52:07,772 - INFO -  * Debugger PIN: 107-680-525
+2025-03-17 15:52:11,901 - INFO - 127.0.0.1 - - [17/Mar/2025 15:52:11] "GET / HTTP/1.1" 200 -
+2025-03-17 15:52:51,086 - INFO - 127.0.0.1 - - [17/Mar/2025 15:52:51] "POST / HTTP/1.1" 200 -
+2025-03-17 15:53:48,920 - INFO - 127.0.0.1 - - [17/Mar/2025 15:53:48] "POST / HTTP/1.1" 200 -
+2025-03-17 15:53:57,217 - INFO - 127.0.0.1 - - [17/Mar/2025 15:53:57] "POST / HTTP/1.1" 200 -
+2025-03-17 15:54:08,426 - INFO - 127.0.0.1 - - [17/Mar/2025 15:54:08] "POST / HTTP/1.1" 200 -
+2025-03-17 15:57:08,410 - INFO -  * Detected change in '/Users/joseprieraquerol/Documents/Projects/Artificial_Intelligence_Portfolio/Chatbot_Project/app.py', reloading
+2025-03-17 15:57:08,630 - INFO -  * Restarting with stat
+2025-03-17 15:57:12,206 - WARNING -  * Debugger is active!
+2025-03-17 15:57:12,259 - INFO -  * Debugger PIN: 107-680-525
+2025-03-17 15:58:44,252 - INFO -  * Detected change in '/Users/joseprieraquerol/Documents/Projects/Artificial_Intelligence_Portfolio/Chatbot_Project/app.py', reloading
+2025-03-17 15:58:44,410 - INFO -  * Restarting with stat
+2025-03-17 15:58:46,212 - WARNING -  * Debugger is active!
+2025-03-17 15:58:46,240 - INFO -  * Debugger PIN: 107-680-525
+2025-03-17 15:59:04,817 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-17 15:59:04,817 - INFO - [33mPress CTRL+C to quit[0m
+2025-03-17 15:59:04,818 - INFO -  * Restarting with stat
+2025-03-17 15:59:06,303 - WARNING -  * Debugger is active!
+2025-03-17 15:59:06,333 - INFO -  * Debugger PIN: 107-680-525
+2025-03-17 15:59:21,674 - INFO - 127.0.0.1 - - [17/Mar/2025 15:59:21] "GET / HTTP/1.1" 200 -
+2025-03-17 16:00:17,039 - INFO - 127.0.0.1 - - [17/Mar/2025 16:00:17] "POST / HTTP/1.1" 200 -
+2025-03-17 16:00:26,716 - INFO - 127.0.0.1 - - [17/Mar/2025 16:00:26] "POST / HTTP/1.1" 200 -
+2025-03-17 16:00:38,949 - INFO - 127.0.0.1 - - [17/Mar/2025 16:00:38] "POST / HTTP/1.1" 200 -
+2025-03-17 16:00:50,115 - INFO - 127.0.0.1 - - [17/Mar/2025 16:00:50] "POST / HTTP/1.1" 200 -
+2025-03-17 16:00:58,524 - INFO - 127.0.0.1 - - [17/Mar/2025 16:00:58] "POST / HTTP/1.1" 200 -
+2025-03-17 16:01:06,915 - INFO - 127.0.0.1 - - [17/Mar/2025 16:01:06] "POST / HTTP/1.1" 200 -
+2025-03-17 16:01:15,534 - INFO - 127.0.0.1 - - [17/Mar/2025 16:01:15] "POST / HTTP/1.1" 200 -
+2025-03-17 16:01:19,745 - INFO - 127.0.0.1 - - [17/Mar/2025 16:01:19] "POST / HTTP/1.1" 200 -
+2025-03-17 16:01:30,589 - INFO - 127.0.0.1 - - [17/Mar/2025 16:01:30] "POST / HTTP/1.1" 200 -
+2025-03-17 16:01:52,389 - INFO - 127.0.0.1 - - [17/Mar/2025 16:01:52] "POST / HTTP/1.1" 200 -
+2025-03-17 16:02:05,210 - INFO - 127.0.0.1 - - [17/Mar/2025 16:02:05] "POST / HTTP/1.1" 200 -
+2025-03-17 16:04:17,016 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-17 16:04:17,017 - INFO - [33mPress CTRL+C to quit[0m
+2025-03-17 16:04:17,018 - INFO -  * Restarting with stat
+2025-03-17 16:04:18,522 - WARNING -  * Debugger is active!
+2025-03-17 16:04:18,551 - INFO -  * Debugger PIN: 107-680-525
+2025-03-17 16:04:23,633 - INFO - 127.0.0.1 - - [17/Mar/2025 16:04:23] "GET / HTTP/1.1" 200 -
+2025-03-17 16:04:57,018 - INFO - Processing question: What products do you have available?
+2025-03-17 16:04:57,060 - INFO - Entities detected: []
+2025-03-17 16:04:57,060 - INFO - Checking predefined conditions...
+2025-03-17 16:04:57,074 - INFO - 127.0.0.1 - - [17/Mar/2025 16:04:57] "POST / HTTP/1.1" 200 -
+2025-03-17 16:05:06,314 - INFO - Processing question: What orders does John Doe have?
+2025-03-17 16:05:06,329 - INFO - Entities detected: []
+2025-03-17 16:05:06,329 - INFO - Checking predefined conditions...
+2025-03-17 16:05:06,334 - INFO - 127.0.0.1 - - [17/Mar/2025 16:05:06] "POST / HTTP/1.1" 200 -
+2025-03-17 16:08:13,162 - INFO -  * Detected change in '/Users/joseprieraquerol/Documents/Projects/Artificial_Intelligence_Portfolio/Chatbot_Project/database.py', reloading
+2025-03-17 16:08:13,373 - INFO -  * Restarting with stat
+2025-03-17 16:08:15,393 - WARNING -  * Debugger is active!
+2025-03-17 16:08:15,424 - INFO -  * Debugger PIN: 107-680-525
+2025-03-17 16:08:17,637 - INFO -  * Detected change in '/Users/joseprieraquerol/Documents/Projects/Artificial_Intelligence_Portfolio/Chatbot_Project/database.py', reloading
+2025-03-17 16:08:17,953 - INFO -  * Restarting with stat
+2025-03-17 16:08:19,526 - WARNING -  * Debugger is active!
+2025-03-17 16:08:19,562 - INFO -  * Debugger PIN: 107-680-525
+2025-03-17 16:08:20,581 - INFO -  * Detected change in '/Users/joseprieraquerol/Documents/Projects/Artificial_Intelligence_Portfolio/Chatbot_Project/database.py', reloading
+2025-03-17 16:08:20,719 - INFO -  * Restarting with stat
+2025-03-17 16:08:23,227 - WARNING -  * Debugger is active!
+2025-03-17 16:08:23,275 - INFO -  * Debugger PIN: 107-680-525
+2025-03-17 16:08:33,401 - INFO -  * Detected change in '/Users/joseprieraquerol/Documents/Projects/Artificial_Intelligence_Portfolio/Chatbot_Project/database.py', reloading
+2025-03-17 16:08:33,555 - INFO -  * Restarting with stat
+2025-03-17 16:08:35,921 - WARNING -  * Debugger is active!
+2025-03-17 16:08:35,968 - INFO -  * Debugger PIN: 107-680-525
+2025-03-17 16:08:48,102 - INFO -  * Detected change in '/Users/joseprieraquerol/Documents/Projects/Artificial_Intelligence_Portfolio/Chatbot_Project/database.py', reloading
+2025-03-17 16:08:48,302 - INFO -  * Restarting with stat
+2025-03-17 16:08:50,917 - WARNING -  * Debugger is active!
+2025-03-17 16:08:50,964 - INFO -  * Debugger PIN: 107-680-525
+2025-03-17 16:08:51,989 - INFO -  * Detected change in '/Users/joseprieraquerol/Documents/Projects/Artificial_Intelligence_Portfolio/Chatbot_Project/database.py', reloading
+2025-03-17 16:08:52,123 - INFO -  * Restarting with stat
+2025-03-17 16:08:53,812 - WARNING -  * Debugger is active!
+2025-03-17 16:08:53,841 - INFO -  * Debugger PIN: 107-680-525
+2025-03-17 16:09:04,975 - INFO -  * Detected change in '/Users/joseprieraquerol/Documents/Projects/Artificial_Intelligence_Portfolio/Chatbot_Project/database.py', reloading
+2025-03-17 16:09:05,132 - INFO -  * Restarting with stat
+2025-03-17 16:09:07,512 - WARNING -  * Debugger is active!
+2025-03-17 16:09:07,549 - INFO -  * Debugger PIN: 107-680-525
+2025-03-17 16:10:16,429 - INFO -  * Detected change in '/Users/joseprieraquerol/Documents/Projects/Artificial_Intelligence_Portfolio/Chatbot_Project/database.py', reloading
+2025-03-17 16:10:16,573 - INFO -  * Restarting with stat
+2025-03-17 16:10:18,395 - WARNING -  * Debugger is active!
+2025-03-17 16:10:18,428 - INFO -  * Debugger PIN: 107-680-525
+2025-03-17 16:10:21,466 - INFO -  * Detected change in '/Users/joseprieraquerol/Documents/Projects/Artificial_Intelligence_Portfolio/Chatbot_Project/database.py', reloading
+2025-03-17 16:10:21,618 - INFO -  * Restarting with stat
+2025-03-17 16:10:56,976 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-17 16:10:56,977 - INFO - [33mPress CTRL+C to quit[0m
+2025-03-17 16:10:56,978 - INFO -  * Restarting with stat
+2025-03-17 16:10:59,214 - WARNING -  * Debugger is active!
+2025-03-17 16:10:59,250 - INFO -  * Debugger PIN: 107-680-525
+2025-03-17 16:11:01,020 - INFO - Processing question: What orders does John Doe have?
+2025-03-17 16:11:01,060 - INFO - Entities detected: []
+2025-03-17 16:11:01,060 - INFO - Checking predefined conditions...
+2025-03-17 16:11:01,078 - INFO - 127.0.0.1 - - [17/Mar/2025 16:11:01] "POST / HTTP/1.1" 200 -
+2025-03-17 16:11:47,093 - INFO - Processing question: hola!
+2025-03-17 16:11:47,110 - INFO - Entities detected: []
+2025-03-17 16:11:47,110 - INFO - Checking predefined conditions...
+2025-03-17 16:11:47,110 - INFO - Returning generic response.
+2025-03-17 16:11:47,112 - INFO - 127.0.0.1 - - [17/Mar/2025 16:11:47] "POST / HTTP/1.1" 200 -
+2025-03-17 16:11:52,274 - INFO - Processing question: Hello
+2025-03-17 16:11:52,283 - INFO - Entities detected: []
+2025-03-17 16:11:52,283 - INFO - Checking predefined conditions...
+2025-03-17 16:11:52,283 - INFO - Returning generic response.
+2025-03-17 16:11:52,285 - INFO - 127.0.0.1 - - [17/Mar/2025 16:11:52] "POST / HTTP/1.1" 200 -
+2025-03-17 16:11:59,410 - INFO - Processing question: Can you help me?
+2025-03-17 16:11:59,423 - INFO - Entities detected: []
+2025-03-17 16:11:59,424 - INFO - Checking predefined conditions...
+2025-03-17 16:11:59,424 - INFO - Returning generic response.
+2025-03-17 16:11:59,427 - INFO - 127.0.0.1 - - [17/Mar/2025 16:11:59] "POST / HTTP/1.1" 200 -
+2025-03-17 16:12:04,621 - INFO - Processing question: what can you do?
+2025-03-17 16:12:04,635 - INFO - Entities detected: []
+2025-03-17 16:12:04,635 - INFO - Checking predefined conditions...
+2025-03-17 16:12:04,635 - INFO - Returning generic response.
+2025-03-17 16:12:04,639 - INFO - 127.0.0.1 - - [17/Mar/2025 16:12:04] "POST / HTTP/1.1" 200 -
+2025-03-17 16:12:25,813 - INFO - Processing question: What products do you have available?
+2025-03-17 16:12:25,835 - INFO - Entities detected: []
+2025-03-17 16:12:25,835 - INFO - Checking predefined conditions...
+2025-03-17 16:12:25,841 - INFO - 127.0.0.1 - - [17/Mar/2025 16:12:25] "POST / HTTP/1.1" 200 -
+2025-03-17 16:12:35,992 - INFO - Processing question: What orders does John Doe have?
+2025-03-17 16:12:36,017 - INFO - Entities detected: []
+2025-03-17 16:12:36,017 - INFO - Checking predefined conditions...
+2025-03-17 16:12:36,023 - INFO - 127.0.0.1 - - [17/Mar/2025 16:12:36] "POST / HTTP/1.1" 200 -
+2025-03-17 16:12:56,460 - INFO - Processing question: What orders does John Doe have?
+2025-03-17 16:12:56,472 - INFO - Entities detected: []
+2025-03-17 16:12:56,472 - INFO - Checking predefined conditions...
+2025-03-17 16:12:56,477 - INFO - 127.0.0.1 - - [17/Mar/2025 16:12:56] "POST / HTTP/1.1" 200 -
+2025-03-17 16:16:38,510 - INFO -  * Detected change in '/Users/joseprieraquerol/Documents/Projects/Artificial_Intelligence_Portfolio/Chatbot_Project/app.py', reloading
+2025-03-17 16:16:38,673 - INFO -  * Restarting with stat
+2025-03-17 16:16:40,785 - WARNING -  * Debugger is active!
+2025-03-17 16:16:40,815 - INFO -  * Debugger PIN: 107-680-525
+2025-03-17 16:16:50,379 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-17 16:16:50,379 - INFO - [33mPress CTRL+C to quit[0m
+2025-03-17 16:16:50,380 - INFO -  * Restarting with stat
+2025-03-17 16:16:51,986 - WARNING -  * Debugger is active!
+2025-03-17 16:16:52,018 - INFO -  * Debugger PIN: 107-680-525
+2025-03-17 16:17:18,985 - INFO - Processing question: What orders does John Doe have?
+2025-03-17 16:17:19,008 - INFO - Entities detected: []
+2025-03-17 16:17:19,008 - INFO - Checking predefined conditions...
+2025-03-17 16:17:19,017 - INFO - 127.0.0.1 - - [17/Mar/2025 16:17:19] "POST / HTTP/1.1" 200 -
+2025-03-17 16:17:22,361 - INFO - Processing question: What orders does John Doe have?
+2025-03-17 16:17:22,374 - INFO - Entities detected: []
+2025-03-17 16:17:22,374 - INFO - Checking predefined conditions...
+2025-03-17 16:17:22,378 - INFO - 127.0.0.1 - - [17/Mar/2025 16:17:22] "POST / HTTP/1.1" 200 -

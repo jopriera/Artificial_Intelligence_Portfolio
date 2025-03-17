@@ -135,8 +135,9 @@ Here are some examples of questions you can ask the chatbot:
    - Solutions attempted include modifying the query handling logic and ensuring database connections are correct.
    - If you have suggestions or would like to contribute a solution, please feel free to collaborate.
 
-2. **Other Functionalities**:
-   - While some features like business hours and contact information work as expected, others require further refinement.
+2. **Order Queries**:
+   - The chatbot does not correctly respond to questions about orders, such as "What orders does John Doe have?".
+   - Further refinement is needed to handle these queries effectively.
 
 ---
 
@@ -154,3 +155,4 @@ Here are some examples of questions you can ask the chatbot:
 ----------
 
 This project is licensed under the MIT License.
+```

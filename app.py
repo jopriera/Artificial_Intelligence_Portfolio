@@ -1,9 +1,12 @@
-# Import necessary libraries for natural language processing, web development, and database management
+import logging
 import nltk
 from nltk.stem import WordNetLemmatizer
 import spacy
 import sqlite3
 from flask import Flask, request, render_template_string
+
+# Configure logging
+logging.basicConfig(filename='chatbot.log', level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
 # Initialize spaCy and load the English NLP model
 nlp = spacy.load("en_core_web_sm")
@@ -147,64 +150,71 @@ def respond_to_question(question):
     Returns:
         str: The corresponding response.
     """
-    # Convert the question to lowercase for easier comparison
-    question = question.lower()
+    try:
+        logging.info(f"Processing question: {question}")
+        
+        # Convert the question to lowercase for easier comparison
+        question = question.lower()
+        
+        # Process the question with spaCy to identify entities
+        entities = process_question_with_spacy(question)
+        logging.info(f"Entities detected: {entities}")
+        
+        # Use entities to improve responses
+        for entity, label in entities:
+            if label == "ORG":
+                return f"You mentioned '{entity}'. How can I assist you with this organization?"
+            elif label == "GPE":
+                return f"You mentioned '{entity}'. Are you asking about a location?"
+            elif label == "PERSON":
+                # Use the entity name to query employee details
+                return get_employee_details(entity)
+        
+        # Check predefined conditions for keywords
+        logging.info("Checking predefined conditions...")
+        if "hours" in question or "opening hours" in question:
+            return "Our business hours are Monday to Friday, 9am to 5pm. We're closed on weekends and holidays."
+        
+        elif "location" in question or "address" in question:
+            return "We are located at 123 Business Street, Cityville. You can find us easily using GPS or public transportation."
+        
+        elif "price" in question or "cost" in question or "product" in question:
+            # Extract product name from the question (last word as a basic example)
+            product_name = question.split()[-1]
+            return get_product_details(product_name)
+        
+        elif "products available" in question or "what products do you have available" in question:
+            return f"We have the following products available: {list_all_products()}"
+        
+        elif "employee" in question or "employees" in question:
+            # Extract employee name from the question (last word as a basic example)
+            employee_name = question.split()[-1]
+            return get_employee_details(employee_name)
+        
+        elif "order" in question or "orders" in question:
+            words = question.split()
+            customer_name = ' '.join([word for word in words if word not in ["order", "orders", "does", "have"]])
+            return get_order_details(customer_name)
+
+        elif "services" in question:
+            return "We offer consulting, development, and support services. Let us know how we can assist you!"
+        
+        elif "contact" in question or "phone" in question or "email" in question:
+            return "You can reach us by phone at 555-1234 or via email at info@example.com. We're happy to help!"
+        
+        elif "career" in question or "job" in question:
+            return "We're always looking for talented individuals to join our team. Check our careers page for current openings."
+        
+        elif "faq" in question:
+            return "Please visit our FAQs page for answers to frequently asked questions. If you can't find what you're looking for, feel free to ask us directly."
+        
+        # If none of the above conditions match, return a friendly generic message
+        logging.info("Returning generic response.")
+        return "I'm sorry, I didn't quite understand that. Could you rephrase or give me more context? I'm here to help!"
     
-    # Process the question with spaCy to identify entities
-    entities = process_question_with_spacy(question)
-    
-    # Debugging: Print identified entities
-    print("Entities:", entities)
-    
-    # Use entities to improve responses
-    for entity, label in entities:
-        if label == "ORG":
-            return f"You mentioned '{entity}'. How can I assist you with this organization?"
-        elif label == "GPE":
-            return f"You mentioned '{entity}'. Are you asking about a location?"
-        elif label == "PERSON":
-            # Use the entity name to query employee details
-            return get_employee_details(entity)
-    
-    # Check predefined conditions for keywords
-    if "hours" in question or "opening hours" in question:
-        return "Our business hours are Monday to Friday, 9am to 5pm. We're closed on weekends and holidays."
-    
-    elif "location" in question or "address" in question:
-        return "We are located at 123 Business Street, Cityville. You can find us easily using GPS or public transportation."
-    
-    elif "price" in question or "cost" in question or "product" in question:
-        # Extract product name from the question (last word as a basic example)
-        product_name = question.split()[-1]
-        return get_product_details(product_name)
-    
-    elif "products available" in question or "what products do you have available" in question:
-        return f"We have the following products available: {list_all_products()}"
-    
-    elif "employee" in question or "employees" in question:
-        # Extract employee name from the question (last word as a basic example)
-        employee_name = question.split()[-1]
-        return get_employee_details(employee_name)
-    
-    elif "order" in question or "orders" in question:
-        # Extract customer name from the question (last word as a basic example)
-        customer_name = question.split()[-1]
-        return get_order_details(customer_name)
-    
-    elif "services" in question:
-        return "We offer consulting, development, and support services. Let us know how we can assist you!"
-    
-    elif "contact" in question or "phone" in question or "email" in question:
-        return "You can reach us by phone at 555-1234 or via email at info@example.com. We're happy to help!"
-    
-    elif "career" in question or "job" in question:
-        return "We're always looking for talented individuals to join our team. Check our careers page for current openings."
-    
-    elif "faq" in question:
-        return "Please visit our FAQs page for answers to frequently asked questions. If you can't find what you're looking for, feel free to ask us directly."
-    
-    # If none of the above conditions match, return a friendly generic message
-    return "I'm sorry, I didn't quite understand that. Could you rephrase or give me more context? I'm here to help!"
+    except Exception as e:
+        logging.error(f"Error processing question: {e}")
+        return "I'm sorry, I didn't quite understand that. Could you rephrase or give me more context? I'm here to help!"
 
 # HTML template for chatbot interface (simple and clean design)
 template = """
@@ -284,8 +294,8 @@ h1 {
 
 <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </body>
-</html>"""
-
+</html>
+"""
 
 # Create a Flask application instance
 app = Flask(__name__)
@@ -293,7 +303,6 @@ app = Flask(__name__)
 # Define the main route for handling chatbot interactions
 @app.route('/', methods=['GET', 'POST'])
 def index():
-
     """
     Handles user interactions with the chatbot via GET and POST requests.
     
