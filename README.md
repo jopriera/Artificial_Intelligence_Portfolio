@@ -88,42 +88,44 @@ To configure the environment, follow these steps:
 ```http://127.0.0.1:5000/```
 
 
+
+
 ## Example Use Cases
 --------------------
 
 Here are some examples of questions you can ask the chatbot:
 
 1. **Business Hours**:
- - "What are your business hours?"
- - "When do you open?"
+   - "What are your business hours?"
+   - "When do you open?"
 
 2. **Location**:
- - "Where are you located?"
- - "What is your address?"
+   - "Where are you located?"
+   - "What is your address?"
 
 3. **Pricing**:
- - "How much does it cost?"
- - "What is the price of your services?"
+   - "How much does it cost?"
+   - "What is the price of your services?"
 
 4. **Services**:
- - "What services do you offer?"
- - "Can you tell me about your consulting services?"
+   - "What services do you offer?"
+   - "Can you tell me about your consulting services?"
 
 5. **Products**:
- - "What products do you sell?"
- - "Do you have any new arrivals?"
+   - "What products do you sell?"
+   - "Do you have any new arrivals?"
 
 6. **Contact Information**:
- - "How can I contact you?"
- - "What is your phone number?"
+   - "How can I contact you?"
+   - "What is your phone number?"
 
 7. **Careers**:
- - "Are there any job openings?"
- - "How can I apply for a job?"
+   - "Are there any job openings?"
+   - "How can I apply for a job?"
 
 8. **FAQs**:
- - "Where can I find FAQs?"
- - "Do you have a help page?"
+   - "Where can I find FAQs?"
+   - "Do you have a help page?"
 
 ---
 
@@ -151,8 +153,17 @@ Here are some examples of questions you can ask the chatbot:
 
 ---
 
+## Conclusion
+----------
+
+This project demonstrates a basic conversational AI chatbot capable of handling common business inquiries. While some features are fully functional, others require further development. The chatbot serves as a foundation for more advanced NLP applications and can be expanded upon in the future.
+
+---
+
 ## License
 ----------
 
 This project is licensed under the MIT License.
 ```
+
+---
