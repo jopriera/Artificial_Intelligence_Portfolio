@@ -142,7 +142,3 @@ Here are some examples of questions you can ask the chatbot:
 ----------
 
 This project is licensed under the MIT License.
-
-
-
-
