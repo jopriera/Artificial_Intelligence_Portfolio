@@ -25,7 +25,19 @@ This chatbot uses Python with NLTK and spaCy for natural language processing. It
 - **Services**: Lists available services offered by the company.
 - **Products**: Offers details about the company's products.
 - **Contact Information**: Provides phone numbers and email addresses for customer support.
-- **Careers**: Shares information about job opportunities and
+- **Careers**: Shares information about job opportunities.
+- **Entity Recognition with spaCy**: Identifies entities in user queries to improve responses.
+
+## Configuration
+--------------
+
+### Setting Up the Environment
+
+To configure the environment, follow these steps:
+
+1. **Create a new conda environment**:
+
+
 
 ```conda create --name chatbot_project python=3.9```
 
@@ -77,7 +89,6 @@ This chatbot uses Python with NLTK and spaCy for natural language processing. It
 ```http://127.0.0.1:5000/```
 
 
-
 ## Example Use Cases
 --------------------
 
@@ -120,10 +131,10 @@ Here are some examples of questions you can ask the chatbot:
 ## Next Steps
 --------------
 
-1. Integrate advanced NLP capabilities using spaCy to handle more complex queries.
-2. Store data in a database (e.g., SQLite or MongoDB) for dynamic responses.
-3. Improve the web interface design using CSS or frameworks like Bootstrap.
-4. Add logging and error handling for better debugging and monitoring.
+1. **Improve Entity Recognition**: Enhance spaCy integration to handle more complex queries.
+2. **Database Integration**: Store data in a database (e.g., SQLite or MongoDB) for dynamic responses.
+3. **Web Interface Design**: Improve the web interface using CSS or frameworks like Bootstrap.
+4. **Logging and Error Handling**: Add logging and error handling for better debugging and monitoring.
 
 ---
 
@@ -131,5 +142,7 @@ Here are some examples of questions you can ask the chatbot:
 ----------
 
 This project is licensed under the MIT License.
+
+
 
 
