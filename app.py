@@ -70,6 +70,21 @@ def get_product_details(product_name):
     else:
         return "Sorry, I couldn't find that product. Could you check the name or try another one?"
 
+# Function to list all available products
+def list_all_products():
+    """
+    Lists all available products from the database.
+    
+    Returns:
+        str: List of product names.
+    """
+    conn = sqlite3.connect('electronics_store.db')
+    cursor = conn.cursor()
+    cursor.execute("SELECT name FROM products")
+    products = cursor.fetchall()
+    conn.close()
+    return ", ".join([product[0] for product in products])
+
 # Function to get employee details from the database
 def get_employee_details(employee_name):
     """
@@ -162,6 +177,9 @@ def respond_to_question(question):
         # Extract product name from the question (last word as a basic example)
         product_name = question.split()[-1]
         return get_product_details(product_name)
+    
+    elif "products available" in question or "what products do you have available" in question:
+        return f"We have the following products available: {list_all_products()}"
     
     elif "employee" in question or "employees" in question:
         # Extract employee name from the question (last word as a basic example)

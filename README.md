@@ -8,6 +8,8 @@ A conversational AI designed to assist with common business inquiries.
 
 This chatbot uses Python with NLTK and spaCy for natural language processing. It is designed to handle common user queries about business hours, location, services, pricing, and more. The chatbot is deployed using Flask as a web interface.
 
+While some features are fully functional, others (like querying products and orders) are still under development.
+
 ## Technologies Used
 --------------------
 
@@ -15,18 +17,19 @@ This chatbot uses Python with NLTK and spaCy for natural language processing. It
 - NLTK
 - spaCy
 - Flask (for web interface)
+- SQLite (for database integration)
 
 ## Features
 -----------
 
-- **Business Hours**: Provides information about the company's opening hours.
-- **Location**: Shares the company's address and directions.
-- **Pricing**: Responds to questions about product or service costs.
-- **Services**: Lists available services offered by the company.
-- **Products**: Offers details about the company's products.
-- **Contact Information**: Provides phone numbers and email addresses for customer support.
-- **Careers**: Shares information about job opportunities.
-- **Entity Recognition with spaCy**: Identifies entities in user queries to improve responses.
+- **Business Hours**: Provides information about the company's opening hours. *(Functional)*
+- **Location**: Shares the company's address and directions. *(Currently not working as expected)*
+- **Pricing**: Responds to questions about product or service costs. *(Functional for specific queries)*
+- **Services**: Lists available services offered by the company. *(Functional)*
+- **Products**: Offers details about the company's products. *(Partially functional; listing all products is under review)*
+- **Contact Information**: Provides phone numbers and email addresses for customer support. *(Functional)*
+- **Careers**: Shares information about job opportunities. *(Functional)*
+- **Entity Recognition with spaCy**: Identifies entities in user queries to improve responses. *(Functional)*
 
 ## Configuration
 --------------
@@ -36,8 +39,6 @@ This chatbot uses Python with NLTK and spaCy for natural language processing. It
 To configure the environment, follow these steps:
 
 1. **Create a new conda environment**:
-
-
 
 ```conda create --name chatbot_project python=3.9```
 
@@ -71,17 +72,14 @@ To configure the environment, follow these steps:
 ```cd chatbot_project```
 
 
-
 3. Activate the environment:
 
 ```conda activate chatbot_project```
 
 
-
 4. Run the chatbot:
 
 ```python app.py```
-
 
 
 5. Open your browser and go to:
@@ -95,44 +93,53 @@ To configure the environment, follow these steps:
 Here are some examples of questions you can ask the chatbot:
 
 1. **Business Hours**:
-- "What are your business hours?"
-- "When do you open?"
+ - "What are your business hours?"
+ - "When do you open?"
 
 2. **Location**:
-- "Where are you located?"
-- "What is your address?"
+ - "Where are you located?"
+ - "What is your address?"
 
 3. **Pricing**:
-- "How much does it cost?"
-- "What is the price of your services?"
+ - "How much does it cost?"
+ - "What is the price of your services?"
 
 4. **Services**:
-- "What services do you offer?"
-- "Can you tell me about your consulting services?"
+ - "What services do you offer?"
+ - "Can you tell me about your consulting services?"
 
 5. **Products**:
-- "What products do you sell?"
-- "Do you have any new arrivals?"
+ - "What products do you sell?"
+ - "Do you have any new arrivals?"
 
 6. **Contact Information**:
-- "How can I contact you?"
-- "What is your phone number?"
+ - "How can I contact you?"
+ - "What is your phone number?"
 
 7. **Careers**:
-- "Are there any job openings?"
-- "How can I apply for a job?"
+ - "Are there any job openings?"
+ - "How can I apply for a job?"
 
 8. **FAQs**:
-- "Where can I find FAQs?"
-- "Do you have a help page?"
+ - "Where can I find FAQs?"
+ - "Do you have a help page?"
+
+---
+
+## Known Issues and Limitations
+--------------------
+
+1. The question `"What products do you have available?"` currently does not return a list of all products due to an issue in query handling.
+2. Questions like `"Where are you located?"` or `"What orders does John Doe have?"` are not returning correct responses.
+3. Some advanced queries related to orders and employees need further refinement.
 
 ---
 
 ## Next Steps
 --------------
 
-1. **Improve Entity Recognition**: Enhance spaCy integration to handle more complex queries.
-2. **Database Integration**: Store data in a database (e.g., SQLite or MongoDB) for dynamic responses.
+1. **Fix Known Issues**: Address current bugs related to product listing and order queries.
+2. **Improve Entity Recognition**: Enhance spaCy integration to handle more complex queries.
 3. **Web Interface Design**: Improve the web interface using CSS or frameworks like Bootstrap.
 4. **Logging and Error Handling**: Add logging and error handling for better debugging and monitoring.
 
