@@ -129,9 +129,13 @@ Here are some examples of questions you can ask the chatbot:
 ## Known Issues and Limitations
 --------------------
 
-1. The question `"What products do you have available?"` currently does not return a list of all products due to an issue in query handling.
-2. Questions like `"Where are you located?"` or `"What orders does John Doe have?"` are not returning correct responses.
-3. Some advanced queries related to orders and employees need further refinement.
+1. **Product Listing**:
+   - Currently, the chatbot does not correctly respond to the question "What products do you have available?" despite several attempts to resolve this issue.
+   - Solutions attempted include modifying the query handling logic and ensuring database connections are correct.
+   - If you have suggestions or would like to contribute a solution, please feel free to collaborate.
+
+2. **Other Functionalities**:
+   - While some features like business hours and contact information work as expected, others require further refinement.
 
 ---
 
