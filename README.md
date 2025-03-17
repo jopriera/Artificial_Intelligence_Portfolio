@@ -18,6 +18,7 @@ While some features are fully functional, others (like querying products and ord
 - spaCy
 - Flask (for web interface)
 - SQLite (for database integration)
+- CSS (for web interface styling)
 
 ## Features
 -----------

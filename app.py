@@ -212,19 +212,80 @@ template = """
 <html>
 <head>
 <title>Chatbot</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+<style>
+body {
+    background: #f0f0f0;
+    font-family: Arial, sans-serif;
+}
+.container {
+    margin-top: 50px;
+}
+.chatbox {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+h1 {
+    color: #00698f;
+    text-align: center;
+}
+#chat-history {
+    margin-top: 20px;
+    background-color: #e9ecef;
+    padding: 15px;
+    border-radius: 10px;
+    max-height: 300px;
+    overflow-y: auto;
+}
+.chat-entry {
+    margin-bottom: 10px;
+}
+.chat-entry strong {
+    color: #00698f;
+}
+</style>
 </head>
 <body>
-<h1>Chatbot</h1>
-<form action="/" method="post">
-<input type="text" name="pregunta" placeholder="Ask me a question">
-<input type="submit" value="Send">
-</form>
-{% if respuesta %}
-<p>Response: {{ respuesta }}</p>
-{% endif %}
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">Chatbot</a>
+</nav>
+
+<div class="container">
+  <div class="chatbox">
+    <h1>Chatbot</h1>
+    <p class="text-center text-muted">Hello! How can I assist you today?</p>
+    
+    <form action="/" method="post">
+      <div class="mb-3">
+        <input type="text" name="pregunta" class="form-control" placeholder="Ask me a question">
+      </div>
+      <button type="submit" class="btn btn-success w-100">Send</button>
+    </form>
+
+    {% if respuesta %}
+    <div id="chat-history">
+      {% for entry in chat_history %}
+      <div class="chat-entry">
+        <p><strong>You:</strong> {{ entry.question }}</p>
+        <p><strong>Chatbot:</strong> {{ entry.response }}</p>
+      </div>
+      {% endfor %}
+      <div class="chat-entry">
+        <p><strong>You:</strong> {{ pregunta }}</p>
+        <p><strong>Chatbot:</strong> {{ respuesta }}</p>
+      </div>
+    </div>
+    {% endif %}
+    
+  </div>
+</div>
+
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </body>
-</html>
-"""
+</html>"""
+
 
 # Create a Flask application instance
 app = Flask(__name__)
@@ -232,6 +293,7 @@ app = Flask(__name__)
 # Define the main route for handling chatbot interactions
 @app.route('/', methods=['GET', 'POST'])
 def index():
+
     """
     Handles user interactions with the chatbot via GET and POST requests.
     
